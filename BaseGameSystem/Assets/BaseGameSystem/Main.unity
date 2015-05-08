@@ -175,7 +175,7 @@ Prefab:
     - target: {fileID: 11436546, guid: 13769089ad8734c568e9a9924e5ed481, type: 2}
       propertyPath: BGMs.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: e2adf2f28fd1842e8a86eda088e53d3e, type: 3}
+      objectReference: {fileID: 8300000, guid: 144c4c8d7a2a94da9b79b8a6b31de0b7, type: 3}
     - target: {fileID: 11436546, guid: 13769089ad8734c568e9a9924e5ed481, type: 2}
       propertyPath: BGMs.Array.data[0].Name
       value: Nanahira

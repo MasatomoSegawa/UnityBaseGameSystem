@@ -18,8 +18,6 @@ public class FadeManager : Singleton<FadeManager>
 	/// <summary>フェード中かどうか</summary>
 	private bool isFading = false;
 
-	private _FadeColor FadeColor;
-
 	public void Awake ()
 	{
 		if (this != Instance) {
@@ -42,15 +40,7 @@ public class FadeManager : Singleton<FadeManager>
 		if (!this.isFading)
 			return;
 			
-		switch (FadeColor) {
-		case _FadeColor.Black:
-			GUI.color = new Color (0, 0, 0, this.fadeAlpha);
-			break;
-
-		case _FadeColor.Red:
-			GUI.color = new Color (255, 0, 0, this.fadeAlpha);
-			break;
-		}
+		GUI.color = new Color (0, 0, 0, this.fadeAlpha);
 
 		//透明度を更新して黒テクスチャを描画
 		//GUI.color = new Color (0, 0, 0, this.fadeAlpha);
@@ -62,9 +52,8 @@ public class FadeManager : Singleton<FadeManager>
 	/// </summary>
 	/// <param name='scene'>シーン名</param>
 	/// <param name='interval'>暗転にかかる時間(秒)</param>
-	public void LoadLevel(string scene, float interval,_FadeColor FadeColor)
+	public void LoadLevel(string scene, float interval)
 	{
-		this.FadeColor = FadeColor;
 
 		StartCoroutine (TransScene (scene, interval));
 	}

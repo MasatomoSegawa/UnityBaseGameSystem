@@ -23,7 +23,6 @@ public class Play : GameLogic {
 	{
 		base.End_GameLogic ();
 		Debug.Log ("GamePlay終了!");
-		SoundManager.Instance.FadeOutBGM ("Nanahira");
 	}
 
 }
